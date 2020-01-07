@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto:300|Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+h1 {
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: lighter;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    padding: 15px;
+    text-align: left;
+    font-size: 15px;
+}
+
+td {
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+/**********************************************/
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+.navigation {
+    text-align: right;
+    margin-top: 50px;
+    margin-right: 15%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: inline;
+}
+
+.navigation a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration-line: none;
+    font-size: inherit;
+    color: black;
+    margin: auto;
+    font-size: 5vmin;
+}
+
+a:hover {
+    color: #ff75ff;
+}
+
+
+#logo {
+    background-image: url("logo_04_pink.png");
+    background-size: contain;
+    height: 15vmin;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 8px;
+}
+
+main {
+    padding: 10px;
+    height: 90%;
+    flex-grow: 1;
+}
+
+footer {
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**************************************/
+.article1 {
+    width: 40vmin;
+    height: 40vmin;
+    background-color: aqua;
+    text-align: center;
+    padding: 18vmin 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration-line: none;
+    font-size: inherit;
+    color: black;
+    margin: auto;
+    font-size: 4vmin;
+
+}
+
+.article2 {
+    width: 40vmin;
+    height: 40vmin;
+    background-color: aqua;
+    text-align: center;
+    padding: 18vmin 0;
+}
+
+.article3 {
+    width: 40vmin;
+    height: 40vmin;
+    background-color: aqua;
+    text-align: center;
+    padding: 18vmin 0;
+}
+
+.article4 {
+    width: 40vmin;
+    height: 40vmin;
+    background-color: aqua;
+    text-align: center;
+    padding: 18vmin 0;
+}
+
+.articles {
+    justify-content: center;
+
+
+}
+
+.article1,
+.article2,
+.article3,
+.article4 {
+    margin: 10px;
+}
+
+/*******************************************/
+
+.me-pic {
+    width: 200px;
+    position: absolute;
+
+}
+
+.me-text {
+    text-align: justify;
+}
+
+
+/*********************************/
+
+svg {
+    width: auto;
+    height: 30px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 5px;
+}
+
+svg .cls-1 {
+    stroke: black;
+    fill: white;
+    stroke-width: 1px;
+    fill: transparent;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: draw 3s linear forwards;
+
+}
+
+@keyframes draw {
+    50% {
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: black;
+        stroke: black;
+    }
+}
+
+/****************************************************/
+
+
+@media only screen and (max-width: 600px) {
+    .articles {
+    display: grid;
+    grid-gap: 10px 10px;
+       grid-template-columns: auto;
+    }
+
+    .me-pic {
+        width: 150px;
+    }
+
+    .me {
+        margin-left: 15%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+
+@media only screen and (min-width: 601px) {
+   .articles {
+    display: grid;
+    grid-gap: 10px 10px;
+       grid-template-columns: auto auto auto auto;}
+
+    .me-text {
+        margin-left: 35%;
+    }
+
+    .me {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+    }
+}
